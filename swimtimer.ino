@@ -1,7 +1,8 @@
 // Motor City Swim Timer
 // Marvin Curlee - mcurlee.com
 
-const int ledPin =  13; 
+const int ledPin =  13;
+const int ledRunningPin = 5;
 
 const int buttonStart = 12;
 int buttonStartState = 0;
@@ -67,7 +68,7 @@ void setup() {
 
   Serial.println("================================================="); 
   Serial.println("=================================================");  
-  Serial.println("          Welcome to Motor City Swimming");   
+  Serial.println("               Motor City Swimming");   
   Serial.println("               Ready to Start Heat.......");   
   Serial.println("=================================================");   
   Serial.println("=================================================");  
@@ -89,6 +90,7 @@ void setup() {
   
   //  Turn on LED to indicate ready to start.
   digitalWrite(ledPin, HIGH);
+  digitalWrite(ledRunningPin, LOW);
 }
 
 
@@ -115,7 +117,8 @@ void loop() {
  if (buttonStartState == HIGH && heatStarted == 0 ) {   
     startTime  = millis();
     heatStarted = 1;
-    digitalWrite(ledPin, LOW);  
+    digitalWrite(ledPin, LOW);
+    digitalWrite(ledRunningPin, HIGH);  
     Serial.println(" ########  HEAT START! ##########");
     Serial.println("");
    
