@@ -79,6 +79,7 @@ void setup() {
   
   // set pin modes
   pinMode(ledPin, OUTPUT);  // LED
+  pinMode(ledRunningPin, OUTPUT);  // LED
   pinMode(buttonStart, INPUT); // Start
   pinMode(buttonLane1, INPUT); // Lane 1
   pinMode(buttonLane2, INPUT); // Lane 2
