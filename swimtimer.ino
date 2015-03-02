@@ -64,12 +64,11 @@ void setup() {
   
   // Print start text
   
-  Serial.println("");
 
   Serial.println("================================================="); 
   Serial.println("=================================================");  
   Serial.println("               Motor City Swimming");   
-  Serial.println("               Ready to Start Heat.......");   
+  Serial.println("               Ready to Start Heat");   
   Serial.println("=================================================");   
   Serial.println("=================================================");  
   Serial.println("");
